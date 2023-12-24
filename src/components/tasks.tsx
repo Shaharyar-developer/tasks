@@ -9,8 +9,8 @@ export default function Tasks() {
         <TaskCard name="Url Shortener" url="/tasks/url-shortener">
           Shorten any urls using the is.gd api.
         </TaskCard>
-        <TaskCard name="Cryptocurrency Rates" url="/tasks/crypto-rates">
-          Get the latest rates of any cryptocurrency.
+        <TaskCard name="Currency Converter" url="/tasks/exchange-rates">
+          Convert any currency to any other currency given any amount.
         </TaskCard>
       </div>
     </>
