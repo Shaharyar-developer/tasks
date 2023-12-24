@@ -11,9 +11,12 @@
   "dependencies": {
     "@nextui-org/react": "^2.2.9",
     "@t3-oss/env-nextjs": "^0.7.0",
+    "@types/qrcode": "^1.5.5",
     "framer-motion": "^10.16.5",
     "html2canvas": "^1.4.1",
+    "lucide-react": "^0.301.0",
     "next": "^14.0.0",
+    "qrcode": "^1.5.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-qr-code": "^2.0.12",
