@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 import { Inter } from "next/font/google";
 
@@ -26,7 +27,9 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={`font-sans ${inter.variable}`}>
         <Toaster richColors />
-        <Providers>{children}</Providers>
+        <Providers>
+          {children} <Analytics mode="auto" />
+        </Providers>
       </body>
     </html>
   );

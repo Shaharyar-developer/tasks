@@ -2,7 +2,10 @@ import { TaskCard } from "./ui/task-card";
 export default function Tasks() {
   return (
     <>
-      <div className="container mx-auto mt-12 grid w-[90%] gap-4 sm:w-auto sm:grid-cols-4 ">
+      <h1 className="mx-auto mt-4 max-w-max text-3xl font-bold">
+        <span className="text-primary-600">Do</span> Things
+      </h1>
+      <div className=" flex-shrink-1 container mx-auto mt-12 flex w-[90%] flex-wrap justify-center gap-4 sm:w-auto ">
         <TaskCard name="Qr Code Generator" url="/tasks/qr-code-generator">
           Generate Dynamic Qr Codes from any given text.
         </TaskCard>

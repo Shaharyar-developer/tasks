@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { Input, Button } from "@nextui-org/react";
 import { triggerToast } from "@/libs/utils";
+import { Nav } from "@/components/navbar";
 export default function Page() {
   const [url, setUrl] = useState("");
   const [shortUrl, setShortUrl] = useState("");
@@ -47,11 +48,12 @@ export default function Page() {
   }, [time]);
   return (
     <>
+      <Nav />
       <div className="mx-auto mt-12 flex max-w-max flex-col justify-center gap-2">
         <Input
           disabled={disabled}
           value={url}
-          startContent={"https://"}
+          startContent={"http://"}
           onChange={(e) => setUrl(e.target.value)}
           label={disabled ? `Please Wait ${time}` : "Enter URL to Shorten"}
         />

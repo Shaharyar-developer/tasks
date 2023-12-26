@@ -14,7 +14,7 @@ type T = Task & {
 const TaskCard = ({ name, url, children }: T) => {
   return (
     <>
-      <Card>
+      <Card className="w-[95%] sm:w-[65%] md:w-[40%] lg:w-[25%]">
         <CardHeader className="max-w-max text-xl font-bold tracking-tighter">
           {name}
         </CardHeader>

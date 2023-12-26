@@ -2,5 +2,8 @@ type Task = {
   name: string;
   url: string;
 };
-
-export type { Task };
+type Learn = {
+  name: string;
+  url: string;
+};
+export type { Task, Learn };

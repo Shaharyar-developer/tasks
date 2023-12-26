@@ -2,6 +2,7 @@
 import { Button, Textarea } from "@nextui-org/react";
 import { triggerToast } from "@/libs/utils";
 import { useState } from "react";
+import { Nav } from "@/components/navbar";
 import html2canvas from "html2canvas";
 import QRCode from "react-qr-code";
 export default function QrCodeGenerator() {
@@ -29,6 +30,7 @@ export default function QrCodeGenerator() {
   };
   return (
     <>
+      <Nav />
       <div
         id="component"
         className={`fixed left-1/2 top-2/3 mx-auto aspect-square -translate-x-1/2 -translate-y-1/2 rounded-xl border-b-3 border-r-3 border-default-500 p-2 transition-all ${
