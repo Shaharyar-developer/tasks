@@ -13,8 +13,9 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Tasks By Shaharyar",
-  description: "A web application with multiple 'tasks' that can be done",
+  title: "Tasks By Shaharyar, Do and Learn",
+  description:
+    "A web application with multiple 'tasks' that can be done and educational posts to learn from",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
