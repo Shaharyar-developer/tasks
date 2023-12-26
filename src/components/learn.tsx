@@ -1,4 +1,4 @@
-import { LearnCard } from "./ui/learn-card";
+import { TaskCard } from "./ui/card";
 import { type Post, allPosts } from "contentlayer/generated";
 export default function Learn() {
   return (
@@ -10,13 +10,13 @@ export default function Learn() {
         <div className=" flex-shrink-1 container mx-auto mt-12 flex w-[90%] flex-wrap justify-center gap-4 sm:w-auto ">
           {allPosts.map((post: Post, idx: number) => {
             return (
-              <LearnCard
+              <TaskCard
                 key={idx}
                 name={post.title}
                 url={`learn/${post.address}`}
               >
                 {post.description}
-              </LearnCard>
+              </TaskCard>
             );
           })}
         </div>

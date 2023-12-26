@@ -1,4 +1,4 @@
-import { TaskCard } from "./ui/task-card";
+import { TaskCard } from "./ui/card";
 export default function Tasks() {
   return (
     <>
