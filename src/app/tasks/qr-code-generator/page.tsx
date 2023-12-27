@@ -33,7 +33,7 @@ export default function QrCodeGenerator() {
       <Nav />
       <div
         id="component"
-        className={`fixed left-1/2 top-2/3 mx-auto aspect-square -translate-x-1/2 -translate-y-1/2 rounded-xl border-b-3 border-r-3 border-default-500 p-2 transition-all ${
+        className={`fixed left-1/2 top-2/3 mx-auto aspect-square -translate-x-1/2 -translate-y-1/2 rounded-xl p-2 transition-all ${
           text.length === 0 ? "opacity-0" : "opacity-100"
         }`}
       >

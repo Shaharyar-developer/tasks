@@ -7,6 +7,8 @@ import { Providers } from "./providers";
 
 import { Toaster } from "sonner";
 
+import { CustomScrollbar } from "@/components/custom-scrollbar";
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -29,6 +31,7 @@ export default function RootLayout({
       <body className={`font-sans ${inter.variable}`}>
         <Toaster richColors />
         <Providers>
+          <CustomScrollbar />
           {children} <Analytics mode="auto" />
         </Providers>
       </body>

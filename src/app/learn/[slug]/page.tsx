@@ -1,6 +1,7 @@
 import { allPosts, type Post } from "contentlayer/generated";
 import { Code, Divider } from "@nextui-org/react";
 import { format } from "date-fns";
+import { Back } from "@/components/back-button";
 import Markdown from "markdown-to-jsx";
 export default function Page({ params }: { params: { slug: string } }) {
   const options = {
@@ -16,8 +17,14 @@ export default function Page({ params }: { params: { slug: string } }) {
         },
       },
       h3: {
-        props: {
-          className: "text-3xl my-4 font-bold",
+        component: (children: { children: string[] }) => {
+          return (
+            <>
+              <h3 className="my-4 text-3xl font-bold">
+                {children.children[0]}
+              </h3>
+            </>
+          );
         },
       },
       h4: {
@@ -37,7 +44,20 @@ export default function Page({ params }: { params: { slug: string } }) {
       },
       p: {
         props: {
-          className: "text-lg tracking-wide leading-8",
+          className: "",
+        },
+        component: (children: { children: string[] }) => {
+          console.log(children);
+
+          return (
+            <>
+              <pre className="ml-2 whitespace-pre-wrap font-sans text-lg leading-8 tracking-wide sm:ml-4">
+                {children.children.map((child) => {
+                  return <>{child}</>;
+                })}
+              </pre>
+            </>
+          );
         },
       },
       a: {
@@ -93,24 +113,25 @@ export default function Page({ params }: { params: { slug: string } }) {
   };
   return (
     <>
+      <Back />
       <div
         aria-hidden
-        className="fixed bottom-0 left-0 z-20 h-[10%] w-full  bg-gradient-to-t from-black/75 via-black/50"
+        className="fixed bottom-0 left-0 z-20 h-[20%] w-full  bg-gradient-to-t from-black/75 via-black/50"
       />
       {allPosts.map((post: Post, idx) => {
         if (post.address === params.slug) {
           return (
-            <div key={idx} className="container mx-auto my-6 sm:my-12">
+            <div key={idx} className="container mx-auto my-6 pb-12 sm:my-12">
               <div className="relative mb-4 grid items-baseline sm:mb-0 ">
-                <h1 className="text-center text-5xl font-bold tracking-tighter text-primary-800">
+                <h1 className="text-center text-3xl font-bold tracking-wide text-primary-800 sm:text-5xl">
                   {post.title}
                 </h1>
                 <div className="ml-[5%] sm:ml-0">
-                  <h6 className="mt-2 text-xl font-bold sm:mt-auto">
+                  <h6 className="mt-2 text-lg font-semibold tracking-wide sm:mt-auto sm:text-2xl">
                     Written By:{" "}
                     <span className="text-primary-700">{post.author}</span>
                   </h6>
-                  <h2 className=" text-xl font-semibold tracking-tighter  sm:text-2xl ">
+                  <h2 className=" text-lg font-semibold tracking-wide  sm:text-2xl ">
                     {format(post.date, "PPP")}
                   </h2>
                 </div>
